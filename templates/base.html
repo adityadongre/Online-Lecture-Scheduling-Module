@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Lecture Scheduling{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'admin_panel' %}">Admin Panel</a>
+            <a href="{% url 'instructor_panel' %}">Instructor Panel</a>
+        </nav>
+        
+    </nav>
+    
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

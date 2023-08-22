@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <!-- Instructor List -->
+<h2>Instructors</h2>
+<ul>
+    {% for instructor in instructors %}
+        <li><a href="{% url 'instructor_detail' instructor.id %}">{{ instructor.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<!-- List of Courses -->
+<h2>Courses</h2>
+<ul>
+    {% for course in courses %}
+        <li><a href="{% url 'course_detail' course.id %}">{{ course.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<!-- List of Lectures -->
+<h2>Lectures</h2>
+<ul>
+    {% for lecture in lectures %}
+        <li><a href="{% url 'lecture_detail' lecture.id %}">{{ lecture.course.name }} - {{ lecture.date }}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
